@@ -1,0 +1,43 @@
+$mainblue: #2A364E;
+$maingrey: #ECEBEB;
+$red: #C7011C;
+$darkblue: #10131B;
+
+%mont-700{
+  font-family: 'Montserrat-Bold';
+  font-weight: 700;
+};
+
+%mont-500{
+  font-family: 'Montserrat-Medium';
+  font-weight: 500;
+};
+
+%mont-400{
+  font-family: 'Montserrat-Regular';
+  font-weight: 400;
+};
+
+%space-700{
+  font-family: 'SpaceGrotesk-Bold';
+  font-weight: 700;
+};
+
+%space-600{
+  font-family: 'SpaceGrotesk-SemiBold';
+  font-weight: 600;
+};
+
+%space-300{
+  font-family: 'SpaceGrotesk-Light';
+  font-weight: 300;
+};
+
+%mainlink{
+  text-transform: uppercase;
+  font-size: 15px;
+  line-height: 18px;
+  @extend %mont-700;
+  padding-bottom: 3px;
+  border-bottom: 2px solid $maingrey;
+};

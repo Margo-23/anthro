@@ -1,0 +1,59 @@
+@font-face{
+  font-family: 'Montserrat-Bold';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: local('Montserrat-Bold'),
+       url('../fonts/Montserrat-Bold.woff2') format('woff2'),
+       url('../fonts/Montserrat-Bold.woff') format('woff');
+};
+
+@font-face{
+  font-family: 'Montserrat-Medium';
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: local('Montserrat-Medium'),
+       url('../fonts/Montserrat-Medium.woff2') format('woff2'),
+       url('../fonts/Montserrat-Medium.woff') format('woff');
+};
+
+@font-face{
+  font-family: 'Montserrat-Regular';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: local('Montserrat-Regular'),
+       url('../fonts/Montserrat-Regular.woff2') format('woff2'),
+       url('../fonts/Montserrat-Regular.woff') format('woff');
+};
+
+@font-face{
+  font-family: 'SpaceGrotesk-Bold';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: local('SpaceGrotesk-Bold'),
+       url('../fonts/SpaceGrotesk-Bold.woff2') format('woff2'),
+       url('../fonts/SpaceGrotesk-Bold.woff') format('woff');
+};
+
+@font-face{
+  font-family: 'SpaceGrotesk-Light';
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: local('SpaceGrotesk-Light'),
+       url('../fonts/SpaceGrotesk-Light.woff2') format('woff2'),
+       url('../fonts/SpaceGrotesk-Light.woff') format('woff');
+};
+
+@font-face{
+  font-family: 'SpaceGrotesk-SemiBold';
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: local('SpaceGrotesk-SemiBold'),
+       url('../fonts/SpaceGrotesk-SemiBold.woff2') format('woff2'),
+       url('../fonts/SpaceGrotesk-SemiBold.woff') format('woff');
+};
