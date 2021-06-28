@@ -1,5 +1,6 @@
 $mainblue: #2A364E;
 $maingrey: #ECEBEB;
+$grey: #9C9FA6;
 $red: #C7011C;
 $darkblue: #10131B;
 
@@ -41,3 +42,18 @@ $darkblue: #10131B;
   padding-bottom: 3px;
   border-bottom: 2px solid $maingrey;
 };
+
+%btn{
+  text-transform: uppercase;
+  @extend %mont-500;
+  font-size: 15px;
+  line-height: 18px;
+  background-color: $mainblue;
+  color: $maingrey;
+  padding: 19px 0;
+  border: none;
+  cursor: pointer;
+  &:hover{
+    background-color: $darkblue;
+  }
+}

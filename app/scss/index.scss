@@ -91,6 +91,43 @@
   }
 }
 
+
+.subscription{
+  
+  padding: 130px 0 98px;
+  &__inner{
+    width: 750px;
+    margin: 0 auto;
+  }
+  &__text{
+    text-align: center;
+    @extend %mont-500;
+    font-size: 25px;
+    line-height: 36px;
+    margin-bottom: 30px;
+  }
+  &__input{
+    width: 69%;
+    margin-right: 2px;
+    min-height: 58px;
+    padding: 0 22px;
+    border: none;
+    background-color: $maingrey;
+    color: $grey;
+    font-size: 16px;
+    line-height: 20px;
+    @extend %mont-500;
+    &::placeholder{      
+      color: $grey;
+    }
+  }
+  &__btn{
+    @extend %btn;
+    width: 219px;
+    min-height: 58px;  
+  }
+}
+
 .footer{
   background-color: $darkblue;
   padding: 50px 0 30px;
