@@ -55,20 +55,12 @@
   &__bottom{
     max-width: 1440px;
     min-height: 711px;
-    margin: -70px auto 0;
+    margin: -76px auto 0;
     display: flex;
     background-position: top right;
     background-repeat: no-repeat;
     display: flex;
     justify-content: start;
-  }
-  &__bottom-menu{
-    background-color: $darkblue;
-    min-height: 711px;
-    width: 485px;
-    margin-top: -70px;
-    padding: 540px 20px 0 150px;
-    color: $maingrey;
     &__title{
       font-size: 40px;
       line-height: 48px;
@@ -88,6 +80,122 @@
       color: $maingrey;
       @extend %mainlink;     
     }
+  }
+
+  &__bottom-menu{
+    background-color: $darkblue;
+    min-height: 711px;
+    width: 485px;
+    margin-top: -70px;
+    padding: 540px 20px 0 150px;
+    color: $maingrey;
+    &__list{
+      display: none;
+    }
+    &__link{
+      display: inline-block;
+      font-size: 20px;
+      line-height: 25px;      
+      @extend %mont-500;
+      margin-top: 30px;
+      margin-bottom: 3px;
+      color: $mainblue;
+      border-bottom: 1px solid transparent;
+      transition: all .3s;
+      &:hover{
+        border-bottom: 1px solid $mainblue;
+      }
+    }
+  }
+  &__bottom-menu--active{
+    background-color: #fff;
+    padding-top: 235px;
+  }
+
+  // &__bottom-submenu__list{
+  //   background-color: #fff;
+  //   min-height: 711px;
+  //   width: 485px;
+  //   margin-top: -70px;
+  //   padding: 235px 20px 0 150px;
+  // }
+}
+
+.categories{
+  padding: 90px 0 120px 0;
+  &__slogan{
+    text-align: center;
+    margin-bottom: 135px;
+  }
+  &__slogan-text{
+    max-width: 745px;
+    margin: 0 auto 20px;
+  }
+  &__slogan-link{
+    @extend %mainlink;
+    border-color: $mainblue;
+    color: $mainblue;
+  }
+  &__items{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item{
+    position: relative;
+    margin-bottom: 30px;
+    &:nth-child(2),
+    &:nth-child(4){
+      margin-left: 28px;
+    }
+  }
+  &__item-info{
+    position: absolute;
+    top: 30px;
+    right: 6%;
+  }
+  &__item-title{
+    @extend %mont-500;
+    font-size: 25px;
+    line-height: 30px;
+    letter-spacing: -1px;
+    display: block;
+    margin-bottom: -12px;
+  }
+  &__item-link{
+    text-transform: uppercase;
+    @extend %mont-500;
+    font-size: 10px;
+    line-height: 12px;
+    color: $mainblue;
+    border-bottom: 1px solid $mainblue;
+  }
+}
+
+.benefites{
+  background-color: $maingrey;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item{
+    min-height: 328px;
+    width: 298px;
+    padding-top: 65px;
+    text-align: center;
+  }
+  &__icon{
+    display: block;
+    margin: 0 auto;
+  }
+  &__title{
+    @extend %space-700;
+    font-size: 23px;
+    line-height: 28px;
+    margin:5px 0 10px;
+  }
+  &__text{
+    font-size: 20px;
+    line-height: 27px;
   }
 }
 
@@ -176,7 +284,7 @@
     font-size: 13px;
     line-height: 16px;
     color: $maingrey;
-    padding-bottom: 3px;
+    padding-bottom: 2px;
     margin-left: 5px;
     border-bottom: 2px solid $maingrey;
   }
