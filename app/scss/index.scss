@@ -199,6 +199,90 @@
   }
 }
 
+.bestsellers{
+  padding: 120px 0 160px;
+  text-align: center;
+  &__title{
+    @extend %title-h2;
+  }
+  &__inner{
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+  }
+  &__link{
+    @extend %mainlink;
+    color: $mainblue;
+    border-color: $mainblue;
+  }
+}
+
+.card{
+  width: 263px;
+  position: relative;
+  text-align: left;
+  @extend %mont-500;
+  font-size: 15px;
+  line-height: 18px;
+  &__img{
+    margin-bottom: 10px;
+  }
+  &__link{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+  &__name{
+    color: $mainblue;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+  &__price-box{
+    display: flex;
+  }
+  &__price{
+    color: $grey;
+    margin-right: 8px;
+    &--sale{
+      color: $red;
+    }
+    &--old{
+      text-decoration: line-through;
+    }
+
+  }
+  &--new{
+    &::after{
+      position: absolute;
+      content: 'NEW';
+      text-transform: uppercase;
+      @extend %mont-500;
+      font-size: 13px;
+      line-height: 16px;
+      top: 17px;
+      left: 17px;
+      color: $mainblue;
+    }
+  }
+  &--sale{
+    &::after{
+      position: absolute;
+      content: 'SALE';
+      text-transform: uppercase;
+      @extend %mont-500;
+      font-size: 13px;
+      line-height: 16px;
+      top: 17px;
+      left: 17px;
+      color: $red;
+    }
+  }
+}
+
 
 .subscription{
   

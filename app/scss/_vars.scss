@@ -57,3 +57,11 @@ $darkblue: #10131B;
     background-color: $darkblue;
   }
 }
+
+%title-h2{
+  @extend %space-600;
+  font-size: 45px;
+  line-height: 54px;
+  text-align: center;
+  margin-bottom: 50px;
+}
