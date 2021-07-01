@@ -9,12 +9,12 @@ $(function(){
   });
 });
 
+
 $(function(){
 $('.comment__slider').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
   prevArrow: $('.comment__slider-prew'),
   nextArrow: $('.comment__slider-next'),
-
 });
 });

@@ -28,7 +28,7 @@
         border-bottom: 1px solid transparent;
         transition: all .5s;
        &:hover{
-         border-bottom: 1px solid $mainblue;
+         border-color: $mainblue;
        }
       }
     }
@@ -318,7 +318,7 @@
     position: absolute;
     top: 20%;
     z-index: 100;
-    // transform: translateY(-50%);
+    cursor: pointer;
   }
   &__slider-prew{
     left: 5px;
@@ -334,6 +334,57 @@
   }
 }
 
+.blog{
+  padding-top: 50px;
+  text-align: center;
+  background-color: $maingrey;
+  background: linear-gradient(to top, #fff 44%, $maingrey 44%);
+  &__title{
+    @extend %title-h2;
+  }
+  &__items{
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+  &__item{
+    width: 360px;
+  }
+  &__item-img{
+    margin-bottom: 15px;
+  }
+  &__item-link{
+    font-size: 18px;
+    line-height: 22px;
+    @extend %mont-700;
+    color: $mainblue;
+    margin-bottom: 10px;
+    border-bottom: 1px solid transparent;
+    transition: all .3s;
+    &:hover{
+      border-color: $mainblue;
+    }
+  }
+  &__item-date{
+    font-size: 18px;
+    line-height: 22px;
+    @extend %mont-500;
+    color: $grey;
+    margin-bottom: 15px;
+  }
+  &__item-text{
+    width: 353px;
+    font-size: 18px;
+    line-height: 25px;
+    @extend %mont-500;
+  }
+  &__link{
+    @extend %mainlink;
+    color: $mainblue;
+    border-color: $mainblue;
+  }
+}
 
 .subscription{
   
