@@ -24,3 +24,109 @@ body{
   z-index: 100;
   display: none;
 }
+
+.card{
+  width: 263px;
+  position: relative;
+  text-align: left;
+  @extend %mont-500;
+  font-size: 15px;
+  line-height: 18px;
+  &__img{
+    margin-bottom: 10px;
+  }
+  &__link{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+  &__name{
+    color: $mainblue;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+  &__price-box{
+    display: flex;
+  }
+  &__price{
+    color: $grey;
+    margin-right: 8px;
+    &--sale{
+      color: $red;
+    }
+    &--old{
+      text-decoration: line-through;
+    }
+
+  }
+  &--new{
+    &::after{
+      position: absolute;
+      content: 'NEW';
+      text-transform: uppercase;
+      @extend %mont-500;
+      font-size: 13px;
+      line-height: 16px;
+      top: 17px;
+      left: 17px;
+      color: $mainblue;
+    }
+  }
+  &--sale{
+    &::after{
+      position: absolute;
+      content: 'SALE';
+      text-transform: uppercase;
+      @extend %mont-500;
+      font-size: 13px;
+      line-height: 16px;
+      top: 17px;
+      left: 17px;
+      color: $red;
+    }
+  }
+}
+
+.breadcrumbs{
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item{
+    position: relative;
+    padding-right: 30px;
+    color: $mainblue;
+    font-size: 14px;
+    line-height: 17px;
+    &::after{
+      position: absolute;
+      content: "/";
+      font-size: 14px;
+      @extend %mont-500;
+      color: $mainblue;
+      right: 15px;
+      top: 0;
+    }
+    &:last-child{
+      color: $grey;
+      &::after{
+        display: none;
+      }
+    }
+  }
+  &__link{
+    @extend %mont-500;
+    font-size: 14px;
+    line-height: 17px;
+    color: inherit;
+    padding-bottom: 2px;
+    border-bottom: 1px solid transparent;
+    transition: all .3s;
+    &:hover{
+      border-color: $mainblue;
+    }
+  }
+}
