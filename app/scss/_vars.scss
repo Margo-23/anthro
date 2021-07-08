@@ -53,6 +53,7 @@ $darkblue: #10131B;
   padding: 19px 0;
   border: none;
   cursor: pointer;
+  transition: all .3s;
   &:hover{
     background-color: $darkblue;
   }
