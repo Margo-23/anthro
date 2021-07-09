@@ -17,7 +17,7 @@
           <nav class="menu">
             <ul class="menu__list">
               <li class="menu__item"><a class="menu__link" href="#">Catalog</a></li>
-              <li class="menu__item"> <a class="menu__link menu__link--active" href="#">Blog</a></li>
+              <li class="menu__item"> <a class="menu__link" href="#">Blog</a></li>
               <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
             </ul>
           </nav>
@@ -32,85 +32,64 @@
   </header>
 
   <main class="main">
-    <section class="blog-page">
-      <div class="blog-page__top">
-        <div class="container">
-          <div class="blog-page__themes">
-            <button class="blog-page__themes-btn" type="button" data-filter="all">all</button>
-            <button class="blog-page__themes-btn" type="button" data-filter=".inspiration">INSPIRATION
-            </button>
-            <button class="blog-page__themes-btn" type="button" data-filter=".decorating">DECORATING</button>
-            <button class="blog-page__themes-btn" type="button" data-filter=".diy">DIY</button>
-            <button class="blog-page__themes-btn" type="button" data-filter=".inside-look">INSIDE LOOK</button>
-          </div>
-
-        </div> 
-      </div>    
-      <div class="blog-page__content">
-        <div class="container">
-          <div class="blog-page__inner">
-
-            <div class="blog-page__item  mix decorating">
-              <img class="blog-page__item-img" src="./images/blog/blog4.jpg" alt="blog image">
-              <div class="blog-page__item-box blog-page__item-box--right">
-                <div class="blog-page__item-theme">decorating</div>
-                <h5 class="blog-page__item-title">What's your Furniture Style?</h5>
-                <p class="blog-page__item-text">We can all tell the difference between enduring traditional and sleek contemporary furniture styles. But are you really clear about terms like mid-century modern and urban farmhouse?</p>
-                <a class="blog-page__item-link" href="#">read</a>
-              </div>
-            </div>
-
-            <div class="blog-page__item  mix inspiration"> 
-              <div class="blog-page__item-box blog-page__item-box--left">
-                <div class="blog-page__item-theme">inspiration</div>
-                <h5 class="blog-page__item-title">Which Sofa Style is Best for You?</h5>
-                <p class="blog-page__item-text">There is no shortage of sofa styles, and which design you select for your home will reflect your personality.</p>
-                <a class="blog-page__item-link" href="#">read</a>
-              </div>
-              <img class="blog-page__item-img" src="./images/blog/blog5.jpg" alt="blog image">
-            </div>
-
-            <div class="blog-page__item mix inspiration">
-              <img class="blog-page__item-img" src="./images/blog/blog6.jpg" alt="blog image">
-              <div class="blog-page__item-box blog-page__item-box--right">
-                <div class="blog-page__item-theme">inspiration</div>
-                <h5 class="blog-page__item-title">2021 Home Furniture Trends</h5>
-                <p class="blog-page__item-text">When searching the Internet for home design trends, there are hundreds that come up from dozens of different publications.</p>
-                <a class="blog-page__item-link" href="#">read</a>
-              </div>
-            </div>
-
-            <div class="blog-page__item mix decorating"> 
-              <div class="blog-page__item-box blog-page__item-box--left">
-                <div class="blog-page__item-theme">decorating</div>
-                <h5 class="blog-page__item-title">Ways to Decorate Your Home with the Color Red</h5>
-                <p class="blog-page__item-text">The color red is a warm color that can be a powerful accent color. Because it can be overwhelming, it should always be used in moderation.</p>
-                <a class="blog-page__item-link" href="#">read</a>
-              </div>
-              <img class="blog-page__item-img" src="./images/blog/blog7.jpg" alt="blog image">
-            </div>
-
-          </div>
-      </div>  
-    </div>
-
-
-      </section>
-
-
-
-    <section class="subscription">
+    <section class="cart">
       <div class="container">
-        <div class="subscription__inner">
-          <p class="subscription__text">Subscribe for Anthropologie emails and hear 
-            about the latest and greatest from our family of brands!</p>
-          <form class="subscription__form" action="#" >
-            <input class="subscription__input" type="text" placeholder="Email">
-            <button class="subscription__btn" type="submit">Subscribe</button>
-          </form>
+        <div class="cart__title">You have <span class="cart__amount">3</span> items in your shopping cart</div>
+        <a class="cart__shoping-link" href="#">continue shopping</a>
+        <div class="cart__top">
+          <div class="cart__top-item">item</div>
+          <div class="cart__top-item">description</div>
+          <div class="cart__top-item">QUATITY</div>
+          <div class="cart__top-item">ITEM TOTAL</div>
         </div>
+        <div class="cart__content">
+          <div class="cart__card">
+            <img class="cart__card-img" src="./images/cards/card7-mini.jpg" alt="product 1">
+            <div class="cart__cartd-info">
+              <a class="cart__card-name" href="#">Sherpa Atticus Armchair</a>
+              <div class="cart__card-color cart__card-color--duck-green">Color:</div>
+            </div>
+            <input class="cart__card-input" type="number" value="1" min="1">
+            <div class="cart__card-price">USD 1835.00</div>
+            <button class="cart__delete-btn"></button>
+          </div>
+
+          <div class="cart__card">
+            <img class="cart__card-img" src="./images/cards/card3-mini.jpg" alt="product 1">
+            <div class="cart__cartd-info">
+              <a class="cart__card-name" href="#">Swirled Drum Coffee Table</a>
+              <div class="cart__card-color cart__card-color--classic-brown">Color:</div>
+            </div>
+            <input class="cart__card-input" type="number" value="1" min="1">
+            <div class="cart__card-price">USD 3294.00</div>
+            <button class="cart__delete-btn"></button>
+          </div>
+
+          <div class="cart__card">
+            <img class="cart__card-img" src="./images/cards/card21-mini.jpg" alt="product 1">
+            <div class="cart__cartd-info">
+              <a class="cart__card-name" href="#">Katina Sleeper Chair</a>
+              <div class="cart__card-color cart__card-color--beige">Color:</div>
+            </div>
+            <input class="cart__card-input" type="number" value="1" min="1">
+            <div class="cart__card-price">USD 3200.00</div>
+            <button class="cart__delete-btn"></button>
+          </div>
+        </div>
+        <div class="cart__bottom">
+          <div class="cart__name-box">
+            <div class="cart__name">Shipping</div>
+            <div class="cart__name">TOTAL PRICE</div>
+          </div>
+          <div class="cart__total-box">
+            <div class="cart__shipping">USD 30.00</div>
+            <div class="cart__total-price">USD 10 164.00</div>
+          </div>
+        </div>
+        <a class="cart__checkout-btn" href="#">CHECKOUT</a>
+
       </div>
-    </section>
+      </section>
   </main>
 
   <footer class="footer">

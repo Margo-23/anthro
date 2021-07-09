@@ -1,0 +1,161 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'libs';
+@import 'global';
+
+
+
+.cart{
+  padding: 50px 0 150px;
+  @extend %mont-500;
+  &__title{
+    font-size: 30px;
+    line-height: 37px;
+    letter-spacing: -0.01em;
+    margin-bottom: 10px;
+  }
+  &__shoping-link{
+    display: table;
+    @extend %mont-500;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 0.12em;
+    color: $mainblue;
+    text-transform: uppercase;
+    padding-bottom: 2px;
+    border-bottom: 1px solid $mainblue;
+  }
+  &__top{
+    padding: 44px 0 40px;
+    display: flex;    
+    text-transform: uppercase;
+    font-size: 15px;
+    line-height: 18px;
+  }
+  &__top-item:nth-child(1){
+    width: 163px;
+    margin-right: 131px;
+  }
+  &__top-item:nth-child(2){
+    width: 360px;
+    margin-right: 21px;
+  }
+  &__top-item:nth-child(3){
+    width: 107px;
+    margin-right: 88px;
+  }
+  &__card{
+    display: flex;
+    align-items: center;
+    padding: 27px 0;
+    border-top: 1px solid $grey;
+  }
+  &__cartd-info{
+    min-width: 360px;
+    margin:0 21px 0 131px;
+  }
+  &__card-name{
+    display: table;
+    font-size: 20px;
+    line-height: 25px;
+    color: $mainblue;
+    margin-bottom: 10px;
+    border-bottom: 1px solid transparent;
+    transition: all .3s;
+    &:hover{
+      border-color: $mainblue;
+    }
+  }
+  &__card-color{
+    max-width: 65px;
+    font-size: 15px;
+    line-height: 18px;
+    position: relative;
+    &::after{
+      position: absolute;
+      content: '';
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;      
+      top: 0;
+      right: 0;
+    }
+    &--limestone::after{
+      background-color: #6A6B66;
+    }
+    &--duck-green::after{
+      background-color: #605C37;
+    }
+    &--burgundy::after{
+      background-color: #C1001D;
+    }
+    &--classic-brown::after{
+      background-color: #774C1E;
+    }
+    &--pine-forest::after{
+      background-color: #9EA8A6;
+    }
+    &--beige::after{
+      background-color: #EED9D0;
+    }
+    &--mustard::after{
+      background-color: #D3BB44;
+    }
+  }
+  &__card-price{
+    width: 125px;
+    margin:0 120px 0 88px;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+  &__delete-btn{
+    border: none;
+    width: 24px;
+    height: 24px;
+    background-image: url('../images/icons/delete.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+  }
+  &__bottom{
+    width: 265px;
+    padding-top: 3px;
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    @extend %mont-400;
+    font-size: 15px;
+    line-height: 18px;
+    margin-bottom: 26px;
+    margin-left: auto;
+  }
+  &__name + .cart__name{
+    margin-top: 15px;
+  }
+  &__shipping{
+    margin-bottom: 15px;
+  }
+  &__checkout-btn{
+    display: block;
+    margin-left: auto;
+    width: 175px;
+    height: 40px;
+    text-transform: uppercase;
+    @extend %mont-500;
+    font-size: 15px;
+    line-height: 40px;
+    background-color: $mainblue;
+    color: $maingrey;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: all .3s;
+    &:hover{
+      background-color: $darkblue;
+    }
+
+  }
+}

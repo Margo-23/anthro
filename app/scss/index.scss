@@ -40,6 +40,12 @@
       &__item + .user-nav__item{
         margin-left: 15px;
       }
+      &__item{
+        transition: all .3s;
+        &:hover{
+          transform: scale(120%);
+        }
+      }
       &__heart{
         position: relative;
         &::after{
@@ -482,6 +488,12 @@
   }
   &__social-link{
     margin-right: 18px;
+  }
+  &__social-img{
+    transition: all .3s;
+    &:hover{
+      transform: scale(120%);
+    }
   }
   &__copy{
     @extend %mont-400;
