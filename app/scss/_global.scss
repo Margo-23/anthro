@@ -7,7 +7,7 @@ body{
 }
 
 .container{
-  width: 1200px;
+  max-width: 1200px;
   padding: 0 30px;
   margin: 0 auto;
 }
@@ -18,12 +18,13 @@ body{
 
 .logo{
   z-index: 100;
+  &--inversion{
+    svg path{
+      fill: #fff;
+    }
+  }
 }
 
-.logo-blue{
-  z-index: 100;
-  display: none;
-}
 
 .card{
   width: 263px;
@@ -127,6 +128,48 @@ body{
     transition: all .3s;
     &:hover{
       border-color: $mainblue;
+    }
+  }
+}
+
+.site-navigation{
+  padding: 100px 35px;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 95;
+  display: none;
+  &__item-link{
+    text-transform: uppercase;
+    display: table;
+    padding-bottom: 2px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid transparent;
+    &:hover{
+      border-color: $mainblue;
+    }
+  }
+  .collections{
+    margin-bottom: 20px;
+    &__item{
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media (max-width:768px){
+  .logo{
+    svg{
+      display: block;
+      margin: auto 0;
+      width: 75px;
+      height: 29px;
+    }
+    &--inversion{
+      svg path{
+        fill: $mainblue;
+      }
     }
   }
 }

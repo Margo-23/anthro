@@ -11,7 +11,29 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
     .menu{
+      &__btn,
+      &__btn-close{
+        border: none;
+        width: 25px;
+        height: 17px;
+        background-color: transparent;
+        background-image: url('../images/menu-btn.svg');
+        background-repeat: no-repeat;
+        cursor: pointer;
+        display: none;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        z-index: 100;
+      }
+      &__btn-close{
+        width: 20px;
+        height: 20px;
+        background-image: url('../images/close-btn.svg');
+      }
       &__list{
         display: flex;
         justify-content: center;
@@ -63,11 +85,12 @@
   }
   &__bottom{
     max-width: 1440px;
-    min-height: 711px;
+    min-height: 787px;
     margin: -76px auto 0;
     display: flex;
     background-position: top right;
     background-repeat: no-repeat;
+    background-size: contain;
     display: flex;
     justify-content: start;
     &__title{
@@ -93,11 +116,23 @@
 
   &__bottom-menu{
     background-color: $darkblue;
-    min-height: 711px;
-    width: 485px;
-    margin-top: -70px;
-    padding: 540px 20px 0 150px;
+    width: 33.5%;
+    margin-top: -76px;
+    padding: 540px 20px 75px 150px;
     color: $maingrey;
+    position: relative;
+    &__btn-close{
+      display: none;
+      background-color: transparent;
+      border: none;
+      width: 20px;
+      height: 20px;
+      background-image: url('../images/close-btn.svg');
+      background-repeat: no-repeat;
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+    }
     &__list{
       display: none;
     }
@@ -118,16 +153,9 @@
   }
   &__bottom-menu--active{
     background-color: #fff;
-    padding-top: 235px;
+    padding-top: 294px;
   }
 
-  // &__bottom-submenu__list{
-  //   background-color: #fff;
-  //   min-height: 711px;
-  //   width: 485px;
-  //   margin-top: -70px;
-  //   padding: 235px 20px 0 150px;
-  // }
 }
 
 .categories{
@@ -180,6 +208,9 @@
   }
 }
 
+
+
+
 .benefites{
   background-color: $maingrey;
   &__inner{
@@ -227,70 +258,6 @@
   }
 }
 
-// .card{
-//   width: 263px;
-//   position: relative;
-//   text-align: left;
-//   @extend %mont-500;
-//   font-size: 15px;
-//   line-height: 18px;
-//   &__img{
-//     margin-bottom: 10px;
-//   }
-//   &__link{
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     right: 0;
-//     bottom: 0;
-//     z-index: 1;
-//   }
-//   &__name{
-//     color: $mainblue;
-//     text-transform: uppercase;
-//     margin-bottom: 5px;
-//   }
-//   &__price-box{
-//     display: flex;
-//   }
-//   &__price{
-//     color: $grey;
-//     margin-right: 8px;
-//     &--sale{
-//       color: $red;
-//     }
-//     &--old{
-//       text-decoration: line-through;
-//     }
-
-//   }
-//   &--new{
-//     &::after{
-//       position: absolute;
-//       content: 'NEW';
-//       text-transform: uppercase;
-//       @extend %mont-500;
-//       font-size: 13px;
-//       line-height: 16px;
-//       top: 17px;
-//       left: 17px;
-//       color: $mainblue;
-//     }
-//   }
-//   &--sale{
-//     &::after{
-//       position: absolute;
-//       content: 'SALE';
-//       text-transform: uppercase;
-//       @extend %mont-500;
-//       font-size: 13px;
-//       line-height: 16px;
-//       top: 17px;
-//       left: 17px;
-//       color: $red;
-//     }
-//   }
-// }
 
 .comment{
   background-image: url('../images/quote-bg.svg');
@@ -442,6 +409,27 @@
     justify-content: space-between; 
     margin-bottom: 35px;   
   }
+  &__item{
+    position: relative;
+  }
+  &__item-btn{
+    border: none;
+    width: 15px;
+    height: 15px;
+    background-image: url('../images/footer-bnt.svg');
+    background-color: transparent;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: none;
+  }
+  &__item-btn--open{
+    background-image: none;
+    height: 1px;
+    background-color: $maingrey;
+    margin-top: 5px;
+  }
   &__item-text{
     @extend %mont-400;
     margin-top: 12px;
@@ -499,5 +487,139 @@
     @extend %mont-400;
     font-size: 8px;
     line-height: 10px;
+  }
+}
+
+@media (max-width:1200px){
+  .header{
+    &__bottom {
+      background-position: top left;
+      background-position-x: 55px;
+      background-size: cover;  
+    }
+    &__bottom-menu{
+    padding-left: 20px;
+    }
+  }
+  .footer{
+    &__item{
+      max-width: 160px;
+    }
+    &__item-pay__img {
+      margin-right: 1px;
+  }
+  }
+}
+
+@media (max-width:900px){
+  .header{
+    &__bottom {
+      background-position-x: -50px;
+      &__title{
+        margin-bottom: 17px;
+      }
+    }
+    &__bottom-menu{
+    width: 32%;
+    padding-top: 480px;
+    &--active{
+      padding-top: 234px;
+    }
+    }
+  }
+  .footer{
+    &__inner{
+      flex-wrap: wrap;
+      margin-bottom: 0;
+    }
+
+    &__item:nth-child(5){
+      margin-top: 25px;
+      margin-bottom: -35px;
+      min-width: 42%;
+      display: flex;
+      justify-content: space-between;
+      margin-left: auto;
+    }
+
+  }
+}
+
+@media (max-width:768px){
+  .header{
+    &__top{
+      justify-content: flex-end;
+      .menu{
+        order: -1;
+        &__list{
+          display: none;
+        }
+        &__btn{
+          display: block;
+        }
+      }
+    }
+    &__bottom {
+      min-height: 535px;
+      background-position-x: center;
+    }
+    &__bottom-menu{
+      display: none;
+    }
+  }
+  .user-nav{
+    margin-left: 100px;
+  }
+  .footer{
+    padding-top: 30px;
+    &__item:nth-child(1){
+      display: none;
+    }
+    &__item:nth-child(5){
+      min-width: 58%;
+    }
+  }
+}
+
+@media (max-width: 600px){
+  .footer{
+    &__inner{
+      flex-direction: column;
+    }
+    &__item-btn{
+      display: block;
+    }
+    &__item{
+      min-width: 100%;
+    }
+    &__item-title {
+      text-transform: uppercase;
+      border-bottom: 1px solid $maingrey;
+      padding:5px 0 5px 3px;
+    }
+    &__item-list{
+      display: none;
+    }
+    &__item:nth-child(5){
+      min-width: 100%;
+      margin-bottom: 0;
+      margin-left: 0;
+    }
+    &__social{
+      position: absolute;
+      bottom: -12px;
+      right: 0;
+    }
+  }
+}
+
+@media (max-width: 480px){
+  .header{
+    &__bottom {
+      min-height: 460px;
+    }
+  }
+  .user-nav{
+    margin-left: 30px;
   }
 }
