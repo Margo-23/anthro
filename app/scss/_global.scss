@@ -158,6 +158,14 @@ body{
   }
 }
 
+@media (max-width:1150px){
+  .card{
+    width: auto;
+    font-size: 13px;
+    line-height: 16px;
+  }
+}
+
 @media (max-width:768px){
   .logo{
     svg{
@@ -171,5 +179,12 @@ body{
         fill: $mainblue;
       }
     }
+  }
+}
+
+@media (max-width:480px){
+  .card{
+    font-size: 10px;
+    line-height: 12px;
   }
 }
