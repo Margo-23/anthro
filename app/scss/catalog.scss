@@ -14,6 +14,37 @@
     display: flex;
     justify-content: space-between;
   }
+  &__hide-filters{
+    display: none;
+    position: relative;
+    &__title{
+      font-size: 18px;
+      line-height: 21px;
+      position: relative;
+      cursor: pointer;
+      padding-right: 30px;
+      &::after{
+        content: '';
+        width: 19px;
+        height: 19px;
+        position: absolute;
+        background-image: url('../images/icons/filters.svg');
+        background-repeat: no-repeat;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -2px;
+      }
+    }
+    &__box{
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 40px;
+      min-width: 236px;
+      z-index: 50;
+      background-color: #fff;
+    }
+  }
   &__content-info{
     @extend %mont-500;
     display: flex;
@@ -60,7 +91,7 @@
   }
 
   &__filters{
-    width: 263px;
+    min-width: 236px;
     &__form{
       display: none;
       margin-left: 30px;
@@ -332,3 +363,95 @@
     margin-left: 10px;
   }
 }
+
+@media (max-width:1200px){
+.catalog{
+  .breadcrumbs{
+    margin-left: 0;
+    &__list{
+      justify-content: center;
+    }
+  }
+  &__content{
+    margin-left: 20px;
+  }
+  &__content-cards{
+    width: auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 15px;
+  }
+}
+}
+
+@media (max-width:900px){
+  .catalog{
+    &__content-cards{
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  }
+
+  @media (max-width: 768px){
+    .catalog{
+    &__content {
+        margin-left: 0;
+    }
+      &__content-cards{
+        grid-template-columns: repeat(3, 1fr);
+      }
+      &__content-title{
+        display: none;
+      }
+      &__content-info{
+        position: relative;
+        margin-bottom: 50px;
+        align-items: start;
+      }
+      &__content-result{
+        position: absolute;
+        bottom: -37px;
+        left: 0;
+      }
+      &__filters{
+        display: none;
+      }
+      &__hide-filters{
+        display: block;
+      }
+    }
+    .pagination{
+      &__item{
+        &::after{
+          font-size: 18px;
+          top: 2px;
+        }
+      }
+      &__link{
+        font-size: 18px;
+      }
+      &__button{
+        svg{
+          height: 25px;
+        }
+      }
+    }
+    }  
+
+@media (max-width: 480px){
+  .catalog{
+    &__content-cards{
+      grid-template-columns: repeat(2, 1fr);
+    }
+    &__sort-title{
+      margin-right: 10px;
+    }
+    &__hide-filters__title,
+    &__sort-title,
+    &__sort-wrapper{
+      font-size: 16px;
+    }
+    &__sort-wrapper{
+      background-position-x: 86px;
+    }
+  }
+} 

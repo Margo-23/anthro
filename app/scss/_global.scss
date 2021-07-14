@@ -102,6 +102,7 @@ body{
     color: $mainblue;
     font-size: 14px;
     line-height: 17px;
+    padding-bottom: 10px;
     &::after{
       position: absolute;
       content: "/";

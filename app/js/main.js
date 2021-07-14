@@ -53,6 +53,10 @@ $(function(){
     $(this).next('.catalog__filters__form').toggle();   
   });
 
+  $('.catalog__hide-filters__title').on('click', function(e){
+    $('.catalog__hide-filters__box').toggle();   
+  });
+
 
   $('.color__text').on('click', function(e){
     $(this).toggleClass('color__text--active'); 
