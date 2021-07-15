@@ -12,8 +12,9 @@ $(function(){
       $('.header__bottom-menu').removeClass('header__bottom-menu--active');
       $('.header__bottom__inner').css( "display", "block" );
       $('.header__bottom-menu__list').css( "display", "none" );
-      $('.logo').addClass("logo--inversion"); 
-   
+      if(element.length){
+        $('.logo').addClass("logo--inversion"); 
+      };   
     };
   });
 
